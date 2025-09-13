@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  ecommerce-api:
+    image: first:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9090:9090"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/first_e_commerce
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: DCMarvel+2001=love
+      SPRING_JPA_HIBERNATE_DDL_AUTO: create
+
